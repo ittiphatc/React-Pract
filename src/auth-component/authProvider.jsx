@@ -18,8 +18,6 @@ const AuthProvider = ({ children }) => {
     if (token) {
       axios.defaults.headers.common["Authorization"] = token;
       localStorage.setItem("token", token);
-      // const decodedToken = jwtDecode(token, "food_secret");
-      // setUserData(decodedToken);
     } else {
       delete axios.defaults.headers.common["Authorization"];
       localStorage.removeItem("token");

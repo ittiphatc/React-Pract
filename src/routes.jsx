@@ -4,7 +4,7 @@ import FoodPage from "./component/food";
 import LoginPage from "./auth-component/loginPage";
 import ProtectedRoute from "./ProtectedRoute";
 import Food_Rest_Page from "./component/food_rest";
-
+import AddFood from "./component/add_food";
 
 const RoutesComponent = () => {
 
@@ -17,6 +17,10 @@ const RoutesComponent = () => {
         path: "/",
         element: <FoodPage/>,
       },
+      {
+        path: "/new",
+        element: <AddFood />,
+      }
     ];
   
     // Define routes accessible only to authenticated users
